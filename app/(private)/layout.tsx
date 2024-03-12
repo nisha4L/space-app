@@ -1,11 +1,18 @@
+import Footer from "./footer";
+import Header from "./header";
+import NavBar from "./navbar";
+
 export default function PrivateLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <main className="flex min-h-screen justify-center items-center max-w-md  m-auto">
-      {children}
-    </main>
+    <div>
+      <Header />
+      <NavBar />
+      <main>{children}</main>
+      <Footer />
+    </div>
   );
 }
