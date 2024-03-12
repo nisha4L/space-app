@@ -1,3 +1,3 @@
 export default function Footer() {
-  return <footer>Footer</footer>;
+  return <footer>&copy; Space App {new Date().getFullYear()}</footer>;
 }

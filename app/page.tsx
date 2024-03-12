@@ -5,7 +5,7 @@ export default function Home() {
       <main className="flex min-h-screen justify-center items-center text-white">
         <div className="flex flex-col gap-2 p-5 rounded-lg bg-slate-800 max-w-xs w-full">
           <div className="text-center my-4">
-            <h1>Strings</h1>
+            <h1>Space</h1>
           </div>
           <div>
             <Link
