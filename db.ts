@@ -4,7 +4,14 @@ import { loadEnvConfig } from "@next/env";
 const projectDir = process.cwd();
 loadEnvConfig(projectDir);
 
-export async function getClient() : Promise<Client> {
+export async function getClient(): Promise<Client> {
+
+    if (process.env.POSTGRES_URL_NO_SSL) {
+        const client = new Client({
+            connectionString : process.env.POSTGRES_URL_NO_SSL + "?sslmode=require",
+        })
+        return client;
+    }
 
     const client = new Client({
         user: process.env.POSTGRES_USER,
