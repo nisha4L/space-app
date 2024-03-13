@@ -7,7 +7,7 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const username = searchParams.get("username");
     const page = (searchParams.get("page") && parseInt(searchParams.get("page")!)) || 0;
-    const limit = 10;
+    const limit = 3;
     const offset = page * 3;
 
     const statement = `select p.*, u.username
