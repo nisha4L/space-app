@@ -6,8 +6,11 @@ export async function middleware(request: NextRequest) {
 
     const authenticatedAPIRoutes = [
         pathname.startsWith("/api/users"),
-        pathname.startsWith("/api/posts")
-    ]
+        pathname.startsWith("/api/posts"),
+        pathname.startsWith("/api/follows"),
+        pathname.startsWith("/api/admin"),
+        pathname.startsWith("/api/search")
+    ];
 
     if (authenticatedAPIRoutes.includes(true)) {
         const cookie = request.cookies.get("jwt-token")
